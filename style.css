@@ -5,54 +5,66 @@
   border: 1px;
   border-style: solid;
 }
-#pixel {
+#speech {
   font-family: "Press Start 2P", system-ui;
   font-size: 0.8rem;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   line-height: 1.2em;
 }
+
+button  {
+  font-family: "Press Start 2P", system-ui;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  line-height: 1.2em;
+  background-color: #9a2257;
+  color: white;
+  border-radius: 100%;
+}
+
+/* #next, #back {
+  font-family: "Press Start 2P", system-ui;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  line-height: 1.2em;
+  background-color: #9a2257;
+  color: white;
+  border-radius: 100%;
+} */
 strong,
-em {
+em{
+  display: contents;
   margin: 0;
   padding: 0;
   border-style: none;
 }
 
+strong {font-weight: bold;}
+em {font-style: italic;}
+
 body {
-  background-color: bisque;
+  background-color: #c4bebb;
   min-width: 300px;
 }
 
 header {
-  background-color: brown;
+  background-color: rgb(126, 219, 213);
 }
 footer {
   background-color: green;
 }
 
-nav {
-  background-color: indianred;
-}
-nav ul {
-  background-color: rgb(73, 73, 88);
-}
-nav li {
-  background-color: rgb(255, 195, 139);
-  list-style: square;
-  list-style-position: inside;
-}
-
 main {
-  background-color: lightsalmon;
+  background-color: #c4bebb;
 }
 article {
-  background-color: yellowgreen;
+  background-color: #c4bebb;
 }
 section {
-  background-color: blueviolet;
+  background-color: #9999A4;
 }
 p {
-  background-color: chocolate;
+  background-color: #ffffff;
 }
 
 .intro-container {
@@ -60,9 +72,9 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
-  min-height: 300px;
+  min-height: 200px;
 }
 
 .intro-container p {
@@ -71,7 +83,9 @@ p {
   justify-content: center;
   text-align: center;
   min-height: 300px;
-  padding: 1rem;
+  /* padding: 1rem; */
+  padding: auto;
+  background-color: #88C834;
 }
 
 .starter-container {
@@ -94,6 +108,24 @@ p {
   }
 } */
 
-/* #back, #intro2, #intro3, #intro4 {display: none;} */
+/* #intro2, #intro3, #intro4 {display: none;} */
 #intro1, #intro2, #intro4 {display: none;}
-/* #next, #intro1, #intro2, #intro3 {display: none;} */
+/* #intro1, #intro2, #intro3 {display: none;} */
+
+
+
+
+
+
+
+/* nav {
+  background-color: indianred;
+}
+nav ul {
+  background-color: rgb(73, 73, 88);
+}
+nav li {
+  background-color: rgb(255, 195, 139);
+  list-style: square;
+  list-style-position: inside;
+} */
