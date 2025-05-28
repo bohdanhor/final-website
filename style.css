@@ -1,23 +1,99 @@
 * {
-    padding: 10px;
-    margin: 10px;
-    box-sizing:border-box;
-    border: 1px;
-    border-style: solid;
+  padding: 10px;
+  margin: 10px;
+  box-sizing: border-box;
+  border: 1px;
+  border-style: solid;
+}
+#pixel {
+  font-family: "Press Start 2P", system-ui;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  line-height: 1.2em;
+}
+strong,
+em {
+  margin: 0;
+  padding: 0;
+  border-style: none;
 }
 
 body {
-    background-color:bisque;
+  background-color: bisque;
+  min-width: 300px;
 }
 
+header {
+  background-color: brown;
+}
+footer {
+  background-color: green;
+}
 
-header {background-color: brown;}
-footer {background-color: green;}
+nav {
+  background-color: indianred;
+}
+nav ul {
+  background-color: rgb(73, 73, 88);
+}
+nav li {
+  background-color: rgb(255, 195, 139);
+  list-style: square;
+  list-style-position: inside;
+}
 
-nav {background-color:indianred;}
-nav ul {background-color: rgb(73, 73, 88);}
-nav li {background-color: rgb(255, 195, 139); list-style:none;}
+main {
+  background-color: lightsalmon;
+}
+article {
+  background-color: yellowgreen;
+}
+section {
+  background-color: blueviolet;
+}
+p {
+  background-color: chocolate;
+}
 
-main {background-color: lightsalmon;}
-article {background-color: yellowgreen;}
-section {background-color: blueviolet;}
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+  margin: 0 auto;
+  min-height: 300px;
+}
+
+.intro-container p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 300px;
+  padding: 1rem;
+}
+
+.starter-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* @media (min-width: 768px) {
+  .starter-container {  
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .starter-container section {
+    width: 30%;
+  }
+} */
+
+/* #back, #intro2, #intro3, #intro4 {display: none;} */
+#intro1, #intro2, #intro4 {display: none;}
+/* #next, #intro1, #intro2, #intro3 {display: none;} */
