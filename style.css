@@ -1,0 +1,23 @@
+* {
+    padding: 10px;
+    margin: 10px;
+    box-sizing:border-box;
+    border: 1px;
+    border-style: solid;
+}
+
+body {
+    background-color:bisque;
+}
+
+
+header {background-color: brown;}
+footer {background-color: green;}
+
+nav {background-color:indianred;}
+nav ul {background-color: rgb(73, 73, 88);}
+nav li {background-color: rgb(255, 195, 139); list-style:none;}
+
+main {background-color: lightsalmon;}
+article {background-color: yellowgreen;}
+section {background-color: blueviolet;}
