@@ -4,13 +4,29 @@
   box-sizing: border-box;
   border: 1px;
   border-style: solid;
-}
-
-#speech {
-  font-family: "Press Start 2P", system-ui;
-  font-size: 0.8rem;
   letter-spacing: 0.1em;
   line-height: 1.2em;
+  min-width: 300px;
+  max-width: 1200px;
+  margin: 10px auto;
+}
+
+body {
+  background-color: #c4bebb;
+  min-width: 300px;
+  font-family: "Press Start 2P", system-ui;
+  font-size: 0.8rem;
+}
+
+header {
+  background-color: rgb(126, 219, 213);
+}
+footer {
+  background-color: green;
+}
+
+h1 {
+  font-size: 1.2rem;
 }
 
 button  {
@@ -39,21 +55,6 @@ em{
   margin: 0;
   padding: 0;
   border-style: none;
-}
-
-strong {font-weight: bold;}
-em {font-style: italic;}
-
-body {
-  background-color: #c4bebb;
-  min-width: 300px;
-}
-
-header {
-  background-color: rgb(126, 219, 213);
-}
-footer {
-  background-color: green;
 }
 
 main {
@@ -120,7 +121,7 @@ p {
 
 
 
-/* nav {
+nav {
   background-color: indianred;
 }
 nav ul {
@@ -130,4 +131,4 @@ nav li {
   background-color: rgb(255, 195, 139);
   list-style: square;
   list-style-position: inside;
-} */
+}
