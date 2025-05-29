@@ -44,6 +44,8 @@ button  {
   letter-spacing: 0.1em;
   line-height: 1.2em;
   border-radius: 50%;
+    background-color: #9a2257;
+  color: white;
 }
 
 /* #next, #back {
@@ -83,7 +85,7 @@ nav, section {
 }
 
 .intro-container p {
-  display: flex;
+  display: flex; /*Needed to align text (-items) inside*/
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -99,38 +101,27 @@ nav, section {
   flex-wrap: wrap;
 }
 
-/* @media (min-width: 768px) {
-  .starter-container {  
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+/*-----CHANGE HERE TO PREVIEW DIFFERENT TEXTS--START */
 
-  .starter-container section {
-    width: 30%;
-  }
-} */
+#intro2, #intro3, #intro4 {display: none;}
+#intro1, #intro2, #intro4 {display: none;}
+#intro1, #intro2, #intro3 {display: none;}
 
-
-/*-----CHANGE HERE TO PREVIEW DIFFERENT TEXTS -- START*/
-/* #intro2, #intro3, #intro4 {display: none;} */
-/* #intro1, #intro2, #intro4 {display: none;} */
-/* #intro1, #intro2, #intro3 {display: none;} */
-/*-----CHANGE HERE TO PREVIEW DIFFERENT TEXTS --- END*/
+/*-----CHANGE HERE TO PREVIEW DIFFERENT TEXTS----END */
 
 nav li {
   list-style: none;
   list-style-position: inside;
 }
 nav li.active {
-  list-style: square;
+  list-style-type: ">> ";
   list-style-position: inside;
   background-color: #c86490;
 }
 
 .default-style {
   background-color: #9a2257;
-  color: rgb(255, 255, 255);
+  color: white;
 }
 
 .hover-style {
@@ -138,5 +129,33 @@ nav li.active {
   color: white;
   list-style-position: inside;
   font-style: oblique;
-    list-style: none;
+    list-style: "-> ";
+      list-style-position: inside;
 }
+
+.button-notActive {
+  opacity: 30%;;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* reminder -- actually not sure if needed anymore, site is narrow already.*/
+/* @media (min-width: 768px) {
+  .starter-container {  
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+} */
