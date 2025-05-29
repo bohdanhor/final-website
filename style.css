@@ -1,3 +1,12 @@
+:root {
+  --light-gray: #c4bebb;
+  --dark-gray: #9999A4;
+  --screen-green: #88C834;
+  --dark-pink: #9a2257;
+  --ligther-pink: #c86490;
+  --hover-pink: #e090b3;
+}
+
 * {
   padding: 10px;
   margin: 10px;
@@ -12,7 +21,7 @@
 }
 
 main, body {
-  background-color: #c4bebb;
+  background-color: var(--light-gray);
 }
 
 body {
@@ -21,22 +30,38 @@ body {
   font-size: 0.8rem;
 }
 
+strong, em{
+  display: contents; /*Need it to keep bold and italic on the same line with other text*/
+  margin: 0;
+  padding: 0;
+  border-style: none;
+}
+
+header, nav, section {
+  background-color: var(--dark-gray);
+}
+
 header h1, nav h2, p{
-  background-color: #88C834;
-}
-header {
-  background-color: #9999A4;
-}
-footer {
-  background-color: green;
+  background-color: var(--screen-green);
 }
 
 h1 {
   font-size: 1.2rem;
 }
+
 h2 {
   font-size: 1rem;
 }
+
+/*Change or delete later-------START*/
+footer { 
+  background-color: green; 
+  display: none;
+}
+article {
+  background-color: #ffff00;
+}
+/*Change or delete later---------END*/
 
 button  {
   font-family: "Press Start 2P", system-ui;
@@ -44,35 +69,27 @@ button  {
   letter-spacing: 0.1em;
   line-height: 1.2em;
   border-radius: 50%;
-    background-color: #9a2257;
+  background-color: var(--dark-pink);
   color: white;
 }
+
+.button-notActive {
+  opacity: 30%;;
+}
+
+/* Old style of buttons dunno if will change -------*/
 
 /* #next, #back {
   font-family: "Press Start 2P", system-ui;
   font-size: 0.8rem;
   letter-spacing: 0.1em;
   line-height: 1.2em;
-  background-color: #9a2257;
+  background-color: var(--light-gray);
   color: white;
   border-radius: 50%;
 } */
 
-strong,
-em{
-  display: contents;
-  margin: 0;
-  padding: 0;
-  border-style: none;
-}
-
-article {
-  background-color: #ffff00;
-}
-
-nav, section {
-  background-color: #9999A4;
-}
+/* ^^^^^^ Old style of buttons dunno if will change */
 
 .intro-container {
   display: flex;
@@ -113,30 +130,24 @@ nav li {
   list-style: none;
   list-style-position: inside;
 }
-nav li.active {
+nav li.current {
   list-style-type: ">> ";
   list-style-position: inside;
-  background-color: #c86490;
+  background-color: var(--ligther-pink);
 }
 
 .default-style {
-  background-color: #9a2257;
+  background-color: var(--dark-pink);
   color: white;
 }
 
 .hover-style {
-  background-color: #e090b3;
+  background-color: var(--hover-pink);
   color: white;
-  list-style-position: inside;
   font-style: oblique;
     list-style: "-> ";
       list-style-position: inside;
 }
-
-.button-notActive {
-  opacity: 30%;;
-}
-
 
 
 

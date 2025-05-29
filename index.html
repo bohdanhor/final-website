@@ -11,6 +11,8 @@
     <title>Who's your first partner Pokémon?</title>
     <link rel="icon" href="image.png" type="image/png" />
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Load pixel font from google -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -27,9 +29,9 @@
     <nav>
       <h2>Navigation</h2>
       <ul>
-        <li id="navbar" class="active hover-section default-style" name="linkToIndex">Your first partner Pokémon from Pr. Bohdan!</li>
-        <li id="navbar" class="hover-section default-style" name="linkToChart">Type Chart — who are you strong against?</li>
-        <li id="navbar" class="hover-section default-style" name="linkToGyms">Gym Leaders — are you up to challenge?</li> 
+        <li id="navLinkToIndex" class="current hover-section default-style" name="navbar">Your first partner Pokémon from Pr. Bohdan!</li>
+        <li id="navLinkToChart" class="hover-section default-style" name="navbar">Type Chart — who are you strong against?</li>
+        <li id="navLinkToGyms" class="hover-section default-style" name="navbar">Gym Leaders — are you up to challenge?</li> 
       </ul>
     </nav>
 out of main - body
@@ -68,13 +70,13 @@ out of main - body
       <section id="speech">
         <p id="starter1" class="starterSpeech">Choose visely!</p>
         <section class="starter-container">
-          <button type="button" id="starterButton" name="Bulbasaur" class="hover-section">
+          <button type="button" id="Bulbasaur" name="starterButton" class="hover-section">
             Bulbasaur
           </button>
-          <button type="button" id="starterButton" name="Charmander" class="hover-section">
+          <button type="button" id="Charmander" name="starterButton" class="hover-section">
             Charmander
           </button>
-          <button type="button" id="starterButton" name="Squirtle" class="hover-section">
+          <button type="button" id="Squirtle" name="starterButton" class="hover-section">
             Squirtle
           </button>
         </section>
