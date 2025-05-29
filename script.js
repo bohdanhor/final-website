@@ -16,3 +16,17 @@ function showSection(sectionId) {
 
     // add active c
 }
+
+const navBarSect = document.querySelectorAll('.hover-section');
+
+  navBarSect.forEach(section => {
+    section.addEventListener('mouseenter', () => {
+      section.classList.remove('default-style');
+      section.classList.add('hover-style');
+    });
+
+    section.addEventListener('mouseleave', () => {
+      section.classList.remove('hover-style');
+      section.classList.add('default-style');
+    });
+  });

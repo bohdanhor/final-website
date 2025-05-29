@@ -11,15 +11,21 @@
   margin: 10px auto;
 }
 
-body {
+main, body {
   background-color: #c4bebb;
+}
+
+body {
   min-width: 300px;
   font-family: "Press Start 2P", system-ui;
   font-size: 0.8rem;
 }
 
+header h1, nav h2, p{
+  background-color: #88C834;
+}
 header {
-  background-color: rgb(126, 219, 213);
+  background-color: #9999A4;
 }
 footer {
   background-color: green;
@@ -28,15 +34,16 @@ footer {
 h1 {
   font-size: 1.2rem;
 }
+h2 {
+  font-size: 1rem;
+}
 
 button  {
   font-family: "Press Start 2P", system-ui;
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   letter-spacing: 0.1em;
   line-height: 1.2em;
-  background-color: #9a2257;
-  color: white;
-  border-radius: 100%;
+  border-radius: 50%;
 }
 
 /* #next, #back {
@@ -46,7 +53,7 @@ button  {
   line-height: 1.2em;
   background-color: #9a2257;
   color: white;
-  border-radius: 100%;
+  border-radius: 50%;
 } */
 
 strong,
@@ -57,17 +64,12 @@ em{
   border-style: none;
 }
 
-main {
-  background-color: #c4bebb;
-}
 article {
-  background-color: #c4bebb;
+  background-color: #ffff00;
 }
-section {
+
+nav, section {
   background-color: #9999A4;
-}
-p {
-  background-color: #ffffff;
 }
 
 .intro-container {
@@ -86,9 +88,7 @@ p {
   justify-content: center;
   text-align: center;
   min-height: 300px;
-  /* padding: 1rem; */
   padding: auto;
-  background-color: #88C834;
 }
 
 .starter-container {
@@ -111,24 +111,32 @@ p {
   }
 } */
 
+
+/*-----CHANGE HERE TO PREVIEW DIFFERENT TEXTS -- START*/
 /* #intro2, #intro3, #intro4 {display: none;} */
 /* #intro1, #intro2, #intro4 {display: none;} */
 /* #intro1, #intro2, #intro3 {display: none;} */
+/*-----CHANGE HERE TO PREVIEW DIFFERENT TEXTS --- END*/
 
-
-
-
-
-
-
-nav {
-  background-color: indianred;
-}
-nav ul {
-  background-color: rgb(73, 73, 88);
-}
 nav li {
-  background-color: rgb(255, 195, 139);
+  list-style: none;
+  list-style-position: inside;
+}
+nav li.active {
   list-style: square;
   list-style-position: inside;
+  background-color: #c86490;
+}
+
+.default-style {
+  background-color: #9a2257;
+  color: rgb(255, 255, 255);
+}
+
+.hover-style {
+  background-color: #e090b3;
+  color: white;
+  list-style-position: inside;
+  font-style: oblique;
+    list-style: none;
 }
