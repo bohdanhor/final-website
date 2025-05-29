@@ -30,7 +30,7 @@ body {
   font-size: 0.8rem;
 }
 
-strong, em{
+strong, em, span, label {
   display: contents; /*Need it to keep bold and italic on the same line with other text*/
   margin: 0;
   padding: 0;
@@ -91,7 +91,7 @@ button  {
 
 /* ^^^^^^ Old style of buttons dunno if will change */
 
-.intro-container {
+.intro-container, #inputNameSection  {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -110,19 +110,29 @@ button  {
   padding: auto;
 }
 
-.starter-container {
+#starter-container {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
+  max-width: 500px;
+  min-height: 200px;
+  min-width: 300px;
+}
+
+.starterSpeech {
+  max-width: 500px;
+  min-height: 200px;
+  min-width: 100%;
 }
 
 /*-----CHANGE HERE TO PREVIEW DIFFERENT TEXTS--START */
 
 #intro2, #intro3, #intro4 {display: none;}
-#intro1, #intro2, #intro4 {display: none;}
-#intro1, #intro2, #intro3 {display: none;}
+/* #intro1, #intro2, #intro4 {display: none;} */
+/* #intro1, #intro2, #intro3 {display: none;} */
 
 /*-----CHANGE HERE TO PREVIEW DIFFERENT TEXTS----END */
 
@@ -149,14 +159,25 @@ nav li.current {
       list-style-position: inside;
 }
 
+.inputIntro {
+  background-color: var(--screen-green);
+  width: 100%;
+  margin: 0px auto auto auto;
+  border-style:solid;
+  border-width: 2px;
+  border-inline-width: 15px;
+}
 
+#inputNameSection p {
+  margin-bottom: 0;
+}
 
-
-
-
-
-
-
+/* #inputNameSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} */
 
 
 

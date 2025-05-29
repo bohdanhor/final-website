@@ -31,3 +31,12 @@ navBarSect.forEach((section) => {
   });
 });
 /* copied it from internet and edited --------------------------------------- END */
+
+let nameInputButton = document.getElementById("nameInputButton");
+function functNameInput() {
+let nameInput = document.getElementById("nameInput");
+console.log(nameInput.value);
+return nameInput.value;
+}
+
+addEventListener("click",nameInput)

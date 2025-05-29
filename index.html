@@ -23,9 +23,8 @@
 
   <body>
     <header>
-      <h1>Who's your first partner Pokémon?</h1>
+      <h1 name="firstHeader">Who's your first partner Pokémon?</h1>
     </header>
-
     <nav>
       <h2>Navigation</h2>
       <ul>
@@ -37,37 +36,40 @@
 out of main - body
     <main>
       out of section - main
-      <section>
-        <p>
-          This site lets you choose your first partner Pokémon from the classic
+      <section id="speech" name="speechSection" class="intro-container">
+        <section id="inputNameSection" class="introSpeech"><p>This site lets you choose your first partner Pokémon from the classic
           Kanto trio: Bulbasaur, Charmander, or Squirtle. After choosing, you
           can explore type effectiveness and see how your starter stacks up
-          against regional Gym Leaders.
-        </p>
-      </section>
-      <section id="speech" class="intro-container">
+          against regional Gym Leaders.<br><br><br>...<br><br><br>
+          <strong><label for="nameInput" id="intro0" class="label"> >>> So, tell me —<br>what's your name?</label></strong><br>
+          </p>
+          <input type="text" id="nameInput" class="inputIntro"><br>
+          <button id="nameInputButton" name="nameInputButton" class="hover-section">Start</button>
+        </section>
+
         <p id="intro1" class="introSpeech">
-          Hi, sis! Welcome to the world of Pokémon! My name is
+          Hi, <span id="nameOutput">sis</span>! Welcome to the world of Pokémon! My name is
           <strong>PROFESSOR BOHDAN</strong>, and I’ll be your guide today.
         </p>
+
         <p id="intro2" class="introSpeech">
           This site is your very own starting point. Here, you’ll choose one of
           the three legendary first partners from the Kanto region —
           <em>Bulbasaur</em>, <em>Charmander</em>, or <em>Squirtle</em>.
         </p>
+
         <p id="intro3" class="introSpeech">
           Once you’ve chosen your starter, your journey begins! Discover their
           strengths, weaknesses, and find out which Gym Leaders they’re ready to
           take on... and which ones might give you trouble.
         </p>
+
         <p id="intro4" class="introSpeech">
           Now then — are you ready to begin your adventure?
         </p>
         <button type="button" id="next" name="next" class="hover-section">Next</button>
         <button type="button" id="back" name="back" class="hover-section button-notActive">Back</button>
-      </section>
-
-      <section id="speech">
+        
         <p id="starter1" class="starterSpeech">Choose visely!</p>
         <section class="starter-container">
           <button type="button" id="Bulbasaur" name="starterButton" class="hover-section">
