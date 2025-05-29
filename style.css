@@ -5,6 +5,7 @@
   border: 1px;
   border-style: solid;
 }
+
 #speech {
   font-family: "Press Start 2P", system-ui;
   font-size: 0.8rem;
@@ -31,6 +32,7 @@ button  {
   color: white;
   border-radius: 100%;
 } */
+
 strong,
 em{
   display: contents;
@@ -109,7 +111,7 @@ p {
 } */
 
 /* #intro2, #intro3, #intro4 {display: none;} */
-#intro1, #intro2, #intro4 {display: none;}
+/* #intro1, #intro2, #intro4 {display: none;} */
 /* #intro1, #intro2, #intro3 {display: none;} */
 
 
