@@ -1,73 +1,95 @@
+:root {
+  --light-gray: #c4bebb;
+  --dark-gray: #9999A4;
+  --screen-green: #88C834;
+  --dark-pink: #9a2257;
+  --ligther-pink: #c86490;
+  --hover-pink: #e090b3;
+}
+
 * {
   padding: 10px;
   margin: 10px;
   box-sizing: border-box;
   border: 1px;
   border-style: solid;
-}
-
-#speech {
-  font-family: "Press Start 2P", system-ui;
-  font-size: 0.8rem;
   letter-spacing: 0.1em;
   line-height: 1.2em;
+  min-width: 300px;
+  max-width: 1200px;
+  margin: 10px auto;
 }
+
+main, body {
+  background-color: var(--light-gray);
+}
+
+body {
+  min-width: 300px;
+  font-family: "Press Start 2P", system-ui;
+  font-size: 0.8rem;
+}
+
+strong, em{
+  display: contents; /*Need it to keep bold and italic on the same line with other text*/
+  margin: 0;
+  padding: 0;
+  border-style: none;
+}
+
+header, nav, section {
+  background-color: var(--dark-gray);
+}
+
+header h1, nav h2, p{
+  background-color: var(--screen-green);
+}
+
+h1 {
+  font-size: 1.2rem;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+/*Change or delete later-------START*/
+footer { 
+  background-color: green; 
+  display: none;
+}
+article {
+  background-color: #ffff00;
+}
+/*Change or delete later---------END*/
 
 button  {
   font-family: "Press Start 2P", system-ui;
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   letter-spacing: 0.1em;
   line-height: 1.2em;
-  background-color: #9a2257;
+  border-radius: 50%;
+  background-color: var(--dark-pink);
   color: white;
-  border-radius: 100%;
 }
+
+.button-notActive {
+  opacity: 30%;;
+}
+
+/* Old style of buttons dunno if will change -------*/
 
 /* #next, #back {
   font-family: "Press Start 2P", system-ui;
   font-size: 0.8rem;
   letter-spacing: 0.1em;
   line-height: 1.2em;
-  background-color: #9a2257;
+  background-color: var(--light-gray);
   color: white;
-  border-radius: 100%;
+  border-radius: 50%;
 } */
 
-strong,
-em{
-  display: contents;
-  margin: 0;
-  padding: 0;
-  border-style: none;
-}
-
-strong {font-weight: bold;}
-em {font-style: italic;}
-
-body {
-  background-color: #c4bebb;
-  min-width: 300px;
-}
-
-header {
-  background-color: rgb(126, 219, 213);
-}
-footer {
-  background-color: green;
-}
-
-main {
-  background-color: #c4bebb;
-}
-article {
-  background-color: #c4bebb;
-}
-section {
-  background-color: #9999A4;
-}
-p {
-  background-color: #ffffff;
-}
+/* ^^^^^^ Old style of buttons dunno if will change */
 
 .intro-container {
   display: flex;
@@ -80,14 +102,12 @@ p {
 }
 
 .intro-container p {
-  display: flex;
+  display: flex; /*Needed to align text (-items) inside*/
   align-items: center;
   justify-content: center;
   text-align: center;
   min-height: 300px;
-  /* padding: 1rem; */
   padding: auto;
-  background-color: #88C834;
 }
 
 .starter-container {
@@ -98,36 +118,55 @@ p {
   flex-wrap: wrap;
 }
 
+/*-----CHANGE HERE TO PREVIEW DIFFERENT TEXTS--START */
+
+#intro2, #intro3, #intro4 {display: none;}
+#intro1, #intro2, #intro4 {display: none;}
+#intro1, #intro2, #intro3 {display: none;}
+
+/*-----CHANGE HERE TO PREVIEW DIFFERENT TEXTS----END */
+
+nav li {
+  list-style: none;
+  list-style-position: inside;
+}
+nav li.current {
+  list-style-type: ">> ";
+  list-style-position: inside;
+  background-color: var(--ligther-pink);
+}
+
+.default-style {
+  background-color: var(--dark-pink);
+  color: white;
+}
+
+.hover-style {
+  background-color: var(--hover-pink);
+  color: white;
+  font-style: oblique;
+    list-style: "-> ";
+      list-style-position: inside;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* reminder -- actually not sure if needed anymore, site is narrow already.*/
 /* @media (min-width: 768px) {
   .starter-container {  
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
   }
-
-  .starter-container section {
-    width: 30%;
-  }
-} */
-
-/* #intro2, #intro3, #intro4 {display: none;} */
-/* #intro1, #intro2, #intro4 {display: none;} */
-/* #intro1, #intro2, #intro3 {display: none;} */
-
-
-
-
-
-
-
-/* nav {
-  background-color: indianred;
-}
-nav ul {
-  background-color: rgb(73, 73, 88);
-}
-nav li {
-  background-color: rgb(255, 195, 139);
-  list-style: square;
-  list-style-position: inside;
 } */
