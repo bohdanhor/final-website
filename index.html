@@ -26,29 +26,29 @@
       <h1 name="firstHeader">Who's your first partner Pokémon?</h1>
     </header>
     <nav>
-      <h2>Navigation</h2>
-      <ul>
-        <li id="navLinkToIndex" class="current hover-section default-style" name="navbar">Your first partner Pokémon from Pr. Bohdan!</li>
-        <li id="navLinkToChart" class="hover-section default-style" name="navbar">Type Chart — who are you strong against?</li>
-        <li id="navLinkToGyms" class="hover-section default-style" name="navbar">Gym Leaders — are you up to challenge?</li> 
+      <h2 name="navHeader">Navigation</h2>
+      <ul name="navbarUl">
+        <li id="navLiToIndex" class="current hover-section default-style" name="navbarLi"><a id="navLinkToIndex" href="index.html">Your first partner Pokémon from Prof. Bohdan!</a></li>
+        <li id="navLiToChart" class="hover-section default-style" name="navbarLi"><a id="navLinkToTypechart" href="typechart.html">Typechart — who are you strong against?</a></li>
+        <li id="navLiToGyms" class="hover-section default-style" name="navbarLi"><a id="navLinkToGyms" href="gyms.html">Gym Leaders — are you up to challenge?</a></li> 
       </ul>
     </nav>
-out of main - body
     <main>
-      out of section - main
       <section id="speech" name="speechSection" class="intro-container">
-        <section id="inputNameSection" class="introSpeech"><p>This site lets you choose your first partner Pokémon from the classic
-          Kanto trio: Bulbasaur, Charmander, or Squirtle. After choosing, you
-          can explore type effectiveness and see how your starter stacks up
-          against regional Gym Leaders.<br><br><br>...<br><br><br>
-          <strong><label for="nameInput" id="intro0" class="label"> >>> So, tell me —<br>what's your name?</label></strong><br>
+        <!-- <section id="inputNameSection" class="introSpeech"> -->
+          <p id="intro0">This site lets you choose your first partner Pokémon from the classic
+          Kanto trio: <strong>Bulbasaur</strong>, <strong>Charmander</strong>, or <strong>Squirtle</strong>. After choosing, you
+          can explore type effectiveness and see how your starter stacks up against regional Gym Leaders.
+          <br><br><br>...<br><br><br>
+          <strong><label for="nameInput" id="intro-name" class="label"> >>> So, tell me —<br>what's your name?</label></strong>
+          <br>
           </p>
           <input type="text" id="nameInput" class="inputIntro"><br>
-          <button id="nameInputButton" name="nameInputButton" class="hover-section">Start</button>
-        </section>
+          <button id="nameInput-button" name="nameInputButton" class="control-button hover-section">Start</button>
+        <!-- </section> -->
 
         <p id="intro1" class="introSpeech">
-          Hi, <span id="nameOutput">sis</span>! Welcome to the world of Pokémon! My name is
+          Hi, <strong><span id="nameOutput">sis</span></strong>! Welcome to the world of Pokémon! My name is
           <strong>PROFESSOR BOHDAN</strong>, and I’ll be your guide today.
         </p>
 
@@ -67,24 +67,30 @@ out of main - body
         <p id="intro4" class="introSpeech">
           Now then — are you ready to begin your adventure?
         </p>
-        <button type="button" id="next" name="next" class="hover-section">Next</button>
-        <button type="button" id="back" name="back" class="hover-section button-notActive">Back</button>
+        <button type="button" id="next-button" name="next" class="control-button hover-section">Next</button>
+        <button type="button" id="back-button" name="back" class="control-button hover-section button-notActive">Back</button>
         
-        <p id="starter1" class="starterSpeech">Choose visely!</p>
+        <p id="starter1" class="starterSpeech">Choose wisely!</p>
         <section class="starter-container">
-          <button type="button" id="Bulbasaur" name="starterButton" class="hover-section">
-            Bulbasaur
+          <button type="button" id="bulbasaur-button" name="starterButton" class="starter-button hover-section">
+            <br><br><br><br>Bulbasaur
+            <img src="https://archives.bulbagarden.net/media/upload/7/76/Spr_5b_001.png" alt="Official Sprite of Bulbasaur from Black&White2"
+              class="starterSprite" id="bulbasaur-image">
           </button>
-          <button type="button" id="Charmander" name="starterButton" class="hover-section">
-            Charmander
+          <button type="button" id="charmander-button" name="starterButton" class="starter-button hover-section button-notActive">
+            <br><br><br><br>Charmander
+            <img src="https://archives.bulbagarden.net/media/upload/0/0a/Spr_5b_004.png" alt="Official Sprite of Charmander from Black&White2"
+              class="starterSprite" id="charmander-image">
           </button>
-          <button type="button" id="Squirtle" name="starterButton" class="hover-section">
-            Squirtle
+          <button type="button" id="squirtle-button" name="starterButton" class="starter-button hover-section button-notActive">
+            <br><br><br><br>Squirtle
+            <img src="https://archives.bulbagarden.net/media/upload/5/59/Spr_5b_007.png" alt="Official Sprite of Squirtle from Black&White2"
+              class="starterSprite" id="squirtle-image">
           </button>
         </section>
+        <button id="reset-button" class="control-button hover-section">Reset pages</button>
       </section>
-      <section class="starter-container">section4</section>
-      out of section - body
+
     </main>
 
     <footer><p>footer p</p>footer

@@ -1,42 +1,86 @@
-let bulbasaur = document.getElementById("bulbasaur-section");
-let charmander = document.getElementById("charmander-section");
+// Highlight buttons - copied it from internet and edited --------------- START
+  const hoverSect = document.querySelectorAll(".hover-section:not(.button-notActive)"); 
+    // ^^^ Search for all hover elements excluding not active buttons ^^^
 
-let clickBulbasaur = document.getElementById("bulbasaur-btn");
-let clickCharmander = document.getElementById("charmander-btn");
+  hoverSect.forEach((section) => {
+    section.addEventListener("mouseenter", () => {
+      section.classList.remove("default-style");
+      section.classList.add("hover-style");
+    });
 
-function showSection(sectionId) {
-  // remove active class
-  let sections = document.getElementsByClassName("section");
+    section.addEventListener("mouseleave", () => {
+      section.classList.remove("hover-style");
+      section.classList.add("default-style");
+    });
+  });
+// Highlight buttons - copied it from internet and edited ----------------- END
 
-  for (let i = 0; i < sections.length; i++) {
-    sections[i].classList.remove("active");
-  }
+// Check if name is already defined by function below this one
+const nameButton = document.getElementById("nameInput-button");
+const nameOutput = document.getElementById("nameOutput");
+const storedName = localStorage.getItem("playerName");
 
-  // add active c
+if (nameOutput && storedName) {
+  nameOutput.textContent = storedName;
+  console.log("Pre-saved name: " + storedName);
 }
 
-
-/* copied it from internet and edited --------------------------------------- START */
-const navBarSect = document.querySelectorAll(".hover-section");
-
-navBarSect.forEach((section) => {
-  section.addEventListener("mouseenter", () => {
-    section.classList.remove("default-style");
-    section.classList.add("hover-style");
+// Define the name of user after clicking the start button
+if (nameButton) {
+  nameButton.addEventListener("click", () => {
+    const name = document.getElementById("nameInput").value.trim();
+    if (name !== "") {
+      localStorage.setItem("playerName", name);
+      document.getElementById("nameOutput").textContent = name;
+    }
   });
+}
 
-  section.addEventListener("mouseleave", () => {
-    section.classList.remove("hover-style");
-    section.classList.add("default-style");
+// START OF DEFINING STARTER BY CLICKING ------------------
+const bulbaBtn = document.getElementById("bulbasaur-button");
+if (bulbaBtn) {
+  bulbaBtn.addEventListener("click", () => {
+    const starter = "Bulbasaur";
+    localStorage.setItem("starter", starter);
+    console.log("Starter saved: " + starter);
   });
+}
+
+const charBtn = document.getElementById("charmander-button");
+if (charBtn) {
+charBtn.addEventListener("click", () => {
+  const starter = "Charmander";
+  localStorage.setItem("starter", starter);
+  console.log("Starter saved: " + starter);
 });
-/* copied it from internet and edited --------------------------------------- END */
-
-let nameInputButton = document.getElementById("nameInputButton");
-function functNameInput() {
-let nameInput = document.getElementById("nameInput");
-console.log(nameInput.value);
-return nameInput.value;
 }
 
-addEventListener("click",nameInput)
+const squiBtn = document.getElementById("squirtle-button");
+if (squiBtn) {
+  squiBtn.addEventListener("click",() => {
+    const starter = "Squirtle";
+    localStorage.setItem("starter", starter);
+    console.log("Starter saved: " + starter);
+  })
+}
+// END OF DEFINING STARTER BY CLICKING --------------------
+
+const typechartIntro = document.getElementById("typechart0");
+if (typechartIntro) {
+  const name = localStorage.getItem("playerName");
+  const starter = localStorage.getItem("starter");
+
+  if (name && starter) {
+    typechartIntro.innerHTML = `You chose <strong>${starter}</strong>, <strong>${name}</strong>!<br><br>Let’s see how your partner handles type matchups.`;
+  } else {
+    typechartIntro.textContent = "You haven’t chosen a starter yet.";
+  }
+}
+
+const resetButton = document.getElementById("reset-button");
+if (resetButton) {
+    resetButton.addEventListener("click", () =>{
+      localStorage.clear();
+      location.reload();
+  });
+}
