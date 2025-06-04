@@ -116,6 +116,9 @@ function updateButtonStates() {
 const starterMessage = document.getElementById("starter1");
 
 const bulbaBtn = document.getElementById("bulbasaur-button");
+const charBtn = document.getElementById("charmander-button");
+const squiBtn = document.getElementById("squirtle-button");
+
 if (bulbaBtn) {
   bulbaBtn.addEventListener("click", () => {
     const starter = "Bulbasaur";
@@ -127,10 +130,12 @@ if (bulbaBtn) {
     <strong>${starter}</strong>, as a Grass and Poison-type, grows steadily and can handle more than it seems at first glance.
     <br><br><br><br>
     So, <strong>${name}</strong>, do you want to go with<br>the Grass Pokémon <strong>${starter}</strong>?`;
+    bulbaBtn.classList.add("button-pressed");
+    charBtn.classList.remove("button-pressed");
+    squiBtn.classList.remove("button-pressed");
   });
 }
 
-const charBtn = document.getElementById("charmander-button");
 if (charBtn) {
   charBtn.addEventListener("click", () => {
     const starter = "Charmander";
@@ -142,10 +147,12 @@ if (charBtn) {
     <strong>${starter}</strong> is a pure Fire-type, known for its bold and fierce attacks but also for some critical weaknesses.
     <br><br><br><br>
     So, <strong>${name}</strong>, do you want to go with<br>the Fire Pokémon <strong>${starter}</strong>?`;
+    charBtn.classList.add("button-pressed");
+    bulbaBtn.classList.remove("button-pressed");
+    squiBtn.classList.remove("button-pressed");
   });
 }
 
-const squiBtn = document.getElementById("squirtle-button");
 if (squiBtn) {
   squiBtn.addEventListener("click", () => {
     const starter = "Squirtle";
@@ -157,6 +164,9 @@ if (squiBtn) {
     <strong>${starter}</strong>, as a Water-type, doesn’t take many risks — but it can still hold its own in the right hands.
     <br><br><br><br>
     So, <strong>${name}</strong>, do you want to go with<br>the Water Pokémon <strong>${starter}</strong>?`;
+    squiBtn.classList.add("button-pressed");
+    bulbaBtn.classList.remove("button-pressed");
+    charBtn.classList.remove("button-pressed");
   });
 }
 // << -- END OF DEFINING STARTER BY CLICKING --------------------------- << //

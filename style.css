@@ -211,3 +211,15 @@ a, img {
   word-break: break-word;
   white-space: normal;
 }
+
+/* FOR JAVASCRIPT ONLY */
+.button-pressed {
+  background-color: var(--ligther-pink);
+}
+
+#start-gymSection {
+  border: none;
+  max-width: 950px;
+  margin: 10px auto;
+  display: none;
+}

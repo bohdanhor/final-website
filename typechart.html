@@ -33,22 +33,27 @@
     </nav>
     <main>
       <section id="speech" name="speechSection" class="intro-container">
-        <p id="typechart0" class="speech-box">Let’s see how your partner <strong>Pokémon</strong> handles type matchups. <br><br>
+        <!-- I don't understand why I needed to use upcoming on the typechart0, but without it typechart.js hiding doesn't work properly -->
+        <p id="typechart0" class="upcoming speech-box">Let’s see how your partner <strong>Pokémon</strong> handles type matchups.<br><br>
           (You could see this text only if JavaScript is failed.)</p>
         
         <!-- Three lines below managed by typechart.js to replace for a specific piece of information -->
-        <p class="speech-box" id="typechart1">You could see this text only if JavaScript is failed.</p>
-        <p class="speech-box" id="typechart2">You could see this text only if JavaScript is failed.</p>
-        <p class="speech-box" id="typechart3">You could see this text only if JavaScript is failed.</p>
+        <p id="typechart1" class="upcoming speech-box">1. You could see this text only if JavaScript is failed.</p>
+        <p id="typechart2" class="upcoming speech-box">2. You could see this text only if JavaScript is failed.</p>
+        <p id="typechart3" class="upcoming speech-box">3. You could see this text only if JavaScript is failed.</p>
 
         <button type="button" id="next-button-chart" name="next" class="control-button hover-section">Next</button>
         <button type="button" id="back-button-chart" name="back" class="control-button hover-section button-notActive">Back</button>
+
+        <section id="start-gymSection" class="starter-container upcoming">
+          <button id="goToGym-button" class="control-button hover-section">Start Gym Challenge</button>
+        </section>
       </section>
     </main>
     
     <footer><button id="reset-button" class="control-button hover-section">Reset</button>
     </footer>
 
-    <script src="shared.js"></script> <!--|--> <script src="typechart.js"></script> 
+    <script src="shared.js"></script> <!--|--> <script src="typechart.js"></script>
   </body>
 </html>
