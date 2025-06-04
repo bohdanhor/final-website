@@ -78,6 +78,14 @@ button  {
   opacity: 30%;;
 }
 
+.hover-section:not(.button-notActive):hover {
+  background-color: var(--hover-pink);
+  color: white;
+  font-style: oblique;
+  list-style: "->";
+  list-style-position: inside;
+}
+
 .main-container, .intro-container, .speech-box {
   max-width: 950px;
   width: 100%;
@@ -141,25 +149,14 @@ nav li {
   list-style-position: inside;
   max-width: 100%;
   min-width: 100%;
+  background-color: var(--dark-pink);
+  color: white;
 }
 
 nav li.current {
   list-style-type: ">>";
   list-style-position: inside;
   background-color: var(--ligther-pink);
-}
-
-.default-style {
-  background-color: var(--dark-pink);
-  color: white;
-}
-
-.hover-style {
-  background-color: var(--hover-pink);
-  color: white;
-  font-style: oblique;
-  list-style: "->";
-  list-style-position: inside;
 }
 
 a, img {
