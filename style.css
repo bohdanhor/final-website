@@ -31,7 +31,7 @@ body {
 }
 
 strong, em, span, label {
-  display: contents; /*Need it to keep bold and italic on the same line with other text*/
+  display: contents; /* Need this to keep bold, italic etc. on the same line with the other text (because of display:flex behaviour) */
   margin: 0;
   padding: 0;
   border-style: none;
@@ -86,13 +86,22 @@ button  {
   list-style-position: inside;
 }
 
-.main-container, .intro-container, .speech-box {
+.main-container, .intro-container {
   max-width: 950px;
   width: 100%;
   margin: 0 auto;
 }
 
-.intro-container, #inputNameSection, .speech-box, .typechartSpeech, .starter-type-container {
+.speech-box {
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+  display: block;
+}
+
+.intro-container, #inputNameSection, .typechartSpeech {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,7 +110,7 @@ button  {
 }
 
 .intro-container p {
-  display: flex; /* Needed to align text (-items) inside */
+  display: flex; /* Needed to align text (-items) inside, but problematic for the layout, need correction of inner elements like strong, em, etc. */
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -201,9 +210,4 @@ a, img {
 
   word-break: break-word;
   white-space: normal;
-}
-
-.starter-type-container {
-  margin: 0;
-  padding: 0;
 }
