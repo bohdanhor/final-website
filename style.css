@@ -78,20 +78,6 @@ button  {
   opacity: 30%;;
 }
 
-/* Old style of buttons dunno if will change -------*/
-
-/* #next, #back {
-  font-family: "Press Start 2P", system-ui;
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
-  line-height: 1.2em;
-  background-color: var(--light-gray);
-  color: white;
-  border-radius: 50%;
-} */
-
-/* ^^^^^^ Old style of buttons dunno if will change */
-
 .main-container, .intro-container, .speech-box {
   max-width: 950px;
   width: 100%;
@@ -106,20 +92,16 @@ button  {
   margin: 0 auto;
 }
 
-  .intro-container p {
-    display: flex; /* Needed to align text (-items) inside */
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 400px;
-    padding: 1rem;
-  }
-
-.speech-box {
-  display: flex;
-  flex-direction: column;
+.intro-container p {
+  display: flex; /* Needed to align text (-items) inside */
   align-items: center;
   justify-content: center;
+  text-align: center;
+  height: 400px;
+  padding: 1rem;
+  }
+  
+.speech-box {
   text-align: center;
   padding: 1rem;
 }
@@ -137,6 +119,13 @@ button  {
   color: black;
 }
 
+/* These lines will keep autofilled text from changing colour back to white */
+input.inputIntro, input.inputIntro:-webkit-autofill {
+  background-color: var(--lighter-green) !important;
+  -webkit-box-shadow: 0 0 0 1000px var(--lighter-green) inset !important;
+  color: black !important;
+}
+
 #intro0 {
   margin-bottom: 0;
 }
@@ -146,15 +135,6 @@ button  {
 #nameOutput {
   text-transform: uppercase;
 }
-
-/*-----CHANGE HERE TO PREVIEW DIFFERENT TEXTS--START */
-
-/* #intro1, #intro2, #intro3, #intro4, #next-button, #back-button, #starter1, .starter-container {display: none;} */
-/* #intro0, #nameInput, #nameInput-button, #intro1, #intro2, #intro4, #starter1, .starter-container {display: none;} */
-/* #intro0, #nameInput, #nameInput-button, #intro1, #intro2, #intro3, #starter1, .starter-container {display: none;} */
-/* #intro0, #nameInput, #nameInput-button, #intro1, #intro2, #intro3, #intro4, #next-button, #back-button {display: none;} */
-
-/*-----CHANGE HERE TO PREVIEW DIFFERENT TEXTS----END */
 
 nav li {
   list-style-type: ">";
@@ -202,18 +182,28 @@ a, img {
   clip-path: circle(25%);
   position: relative;
   object-fit: contain;
-  max-width: 100px;
-  max-height: 100px;
+  max-width: 150px;
+  max-height: 150px;
 }
 
 .starter-button {
+  min-width: 150px;
+  width: 150px;
+  height: 150px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  padding: 50px 0 0 0;
+
   border-style: solid;
   border-radius: 1px;
-  min-width: auto;
-  max-width: 150px;
-  max-height: 150px;
-  padding: 0px;
-  margin: 0px;
+
+  word-break: break-word;
+  white-space: normal;
 }
 
 .starter-type-container {
