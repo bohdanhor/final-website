@@ -1,3 +1,5 @@
+const currentPage = window.location.pathname;
+
 // Highlight buttons - copied it from internet and edited --------------- START
 const hoverSect = document.querySelectorAll(
   ".hover-section:not(.button-notActive)"
@@ -98,7 +100,6 @@ if (nextButton) {
   });
 }
 
-
 if (backButton) {
   backButton.addEventListener("click", () => {
     if (currentStep > 0) {
@@ -128,15 +129,32 @@ function updateButtonStates() {
     nextButton.classList.remove("button-notActive");
     nextButton.disabled = false;
   }
+  // Force rebind of hover if button was re-enabled
+if (!backButton.disabled && !backButton.classList.contains("hover-style")) {
+  backButton.addEventListener("mouseenter", () => {
+    backButton.classList.add("hover-style");
+  });
+  backButton.addEventListener("mouseleave", () => {
+    backButton.classList.remove("hover-style");
+  });
+}
 }
 
 // -- >> START OF DEFINING STARTER BY CLICKING ------------------------- >> //
+const starterMessage = document.getElementById("starter1");
+
 const bulbaBtn = document.getElementById("bulbasaur-button");
 if (bulbaBtn) {
   bulbaBtn.addEventListener("click", () => {
     const starter = "Bulbasaur";
+    const name = localStorage.getItem("playerName");
     localStorage.setItem("starter", starter);
     console.log("Starter saved: " + starter);
+    document.getElementById("start-buttonSection").style.display = "flex";
+    starterMessage.innerHTML = `You chose <strong>${starter}</strong>, great decision!<br><br><br><br>
+    <strong>${starter}</strong>, as a Grass and Poison-type, grows steadily and can handle more than it seems at first glance.
+    <br><br><br><br>
+    So, <strong>${name}</strong>, do you want to go with<br>the Grass Pokémon <strong>${starter}</strong>?`;
   });
 }
 
@@ -144,8 +162,14 @@ const charBtn = document.getElementById("charmander-button");
 if (charBtn) {
   charBtn.addEventListener("click", () => {
     const starter = "Charmander";
+    const name = localStorage.getItem("playerName");
     localStorage.setItem("starter", starter);
     console.log("Starter saved: " + starter);
+    document.getElementById("start-buttonSection").style.display = "flex";
+    starterMessage.innerHTML = `You chose <strong>${starter}</strong>, nice one!<br><br><br><br>
+    <strong>${starter}</strong> is a pure Fire-type, known for its bold and fierce attacks but also for some critical weaknesses.
+    <br><br><br><br>
+    So, <strong>${name}</strong>, do you want to go with<br>the Fire Pokémon <strong>${starter}</strong>?`;
   });
 }
 
@@ -153,11 +177,25 @@ const squiBtn = document.getElementById("squirtle-button");
 if (squiBtn) {
   squiBtn.addEventListener("click", () => {
     const starter = "Squirtle";
+    const name = localStorage.getItem("playerName");
     localStorage.setItem("starter", starter);
     console.log("Starter saved: " + starter);
+    document.getElementById("start-buttonSection").style.display = "flex";
+    starterMessage.innerHTML = `You chose <strong>${starter}</strong>!<br><br><br><br>
+    <strong>${starter}</strong>, as a Water-type, doesn’t take many risks — but it can still hold its own in the right hands.
+    <br><br><br><br>
+    So, <strong>${name}</strong>, do you want to go with<br>the Water Pokémon <strong>${starter}</strong>?`;
   });
 }
 // << -- END OF DEFINING STARTER BY CLICKING --------------------------- << //
+
+//START (SELECTED POKEMON) BUTTON
+const selectedPokemonButton = document.getElementById("selectedPokemon-button");
+if (selectedPokemonButton) {
+  selectedPokemonButton.addEventListener("click", () => {
+    window.open("typechart.html", "_self");
+  });
+}
 
 //RESET BUTTON
 const resetButton = document.getElementById("reset-button");
@@ -170,23 +208,26 @@ if (resetButton) {
 }
 
 // TYPECHART INTRO MESSAGE
-const typechartIntro = document.getElementById("typechart0");
-if (typechartIntro) {
+if (currentPage.includes("typechart.html")) {
+  const typechartIntro = document.getElementById("typechart0");
   const name = localStorage.getItem("playerName");
   const starter = localStorage.getItem("starter");
 
-  if (name && starter) {
+  if (typechartIntro && name && starter) {
     typechartIntro.innerHTML = `You chose <strong>${starter}</strong>, <strong>${name}</strong>!<br><br>Let’s see how your partner handles type matchups.`;
-  } else {
+  } else if (typechartIntro) {
     typechartIntro.textContent = "You haven’t chosen a starter yet.";
   }
 }
 
-// GYM INTRO MESSAGE
-const gymsIntro = document.getElementById("gyms0");
-const playerName = localStorage.getItem("playerName");
-const starter = localStorage.getItem("starter");
 
-if (gymsIntro && playerName && starter) {
-  gymsIntro.innerHTML = `Trainer <strong>${playerName}</strong>, with your <strong>${starter}</strong>, here’s who you’re ready to face — and who might give you trouble.`;
+// GYM INTRO MESSAGE
+if (currentPage.includes("gyms.html")) {
+  const gymsIntro = document.getElementById("gyms0");
+  const playerName = localStorage.getItem("playerName");
+  const starter = localStorage.getItem("starter");
+
+  if (gymsIntro && playerName && starter) {
+    gymsIntro.innerHTML = `Trainer <strong>${playerName}</strong>, with your <strong>${starter}</strong>, here’s who you’re ready to face — and who might give you trouble.`;
+  }
 }
