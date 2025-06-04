@@ -10,7 +10,6 @@
 
 * {
   padding: 10px;
-  margin: 10px;
   box-sizing: border-box;
   border: 1px;
   border-style: solid;
@@ -38,7 +37,7 @@ strong, em, span, label {
   border-style: none;
 }
 
-header, nav, section {
+header, nav, section, footer {
   background-color: var(--dark-gray);
 }
 
@@ -54,15 +53,14 @@ h2 {
   font-size: 1rem;
 }
 
-/*Change or delete later-------START*/
-footer { 
-  background-color: green; 
-  display: none;
+footer, .button-row { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
 }
-article {
-  background-color: #ffff00;
-}
-/*Change or delete later---------END*/
 
 button  {
   font-family: "Press Start 2P", system-ui;
@@ -94,24 +92,36 @@ button  {
 
 /* ^^^^^^ Old style of buttons dunno if will change */
 
-.intro-container, #inputNameSection, .starterSpeech, .typechartSpeech, .starter-type-container {
+.main-container, .intro-container, .speech-box {
+  max-width: 950px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.intro-container, #inputNameSection, .speech-box, .typechartSpeech, .starter-type-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  min-height: 400px;
-  min-width: 100%;
-  max-width: 650px;
 }
 
-.intro-container p {
-  display: flex; /*Needed to align text (-items) inside*/
+  .intro-container p {
+    display: flex; /* Needed to align text (-items) inside */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 400px;
+    padding: 1rem;
+  }
+
+.speech-box {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 400px;
-  padding: auto;
+  padding: 1rem;
 }
 
 .inputIntro {
@@ -130,6 +140,8 @@ button  {
 #intro0 {
   margin-bottom: 0;
 }
+
+.upcoming {display: none;}
 
 #nameOutput {
   text-transform: uppercase;
@@ -166,8 +178,8 @@ nav li.current {
   background-color: var(--hover-pink);
   color: white;
   font-style: oblique;
-    list-style: "->";
-      list-style-position: inside;
+  list-style: "->";
+  list-style-position: inside;
 }
 
 a, img {
@@ -189,7 +201,6 @@ a, img {
   margin: 0;
   clip-path: circle(25%);
   position: relative;
-  top: 0px;
   object-fit: contain;
   max-width: 100px;
   max-height: 100px;
